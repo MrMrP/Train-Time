@@ -2,63 +2,95 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
 
-    <script src="assets/javascript/train.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+  <!-- Heading Banner-->
+  <div class="jumbotron text-center">
+    <h1 class="display-4">Train-Time: Where are you trying to go</h1>
+  </div>
+  <!-- End Heading Banner-->
 
-    <div class=" text-center jumbotron jumbotron-fluid">
-        <div class="overlay"></div>
-        <div class="container">
-            <h1 class="display-4 mb-1">Train-Time: Where are you Heading????</h1>
-            <p class="lead">Posted on
-                <span>23 September 2017</span>
-            </p>
+  <!--Main Content-->
+    <div class="schedule">
+
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h3 class="panel-title">Current Train Schedule</h3>
         </div>
-    </div>
-
-    <table class="table">
-            <thead class="thead-light">
-              <tr>
-                <th scope="col">Train Name</th>
-                <th scope="col">Destination</th>
-                <th scope="col">First Train Time</th>
-                <th scope="col">Frequency</th>
-              </tr>
+        <div class="panel-body">
+          <table class="table">
+            <tr>
+              <th class="col">Train Name</th>
+              <th class="col">Destination</th>
+              <th class="col">Frequency</th>
+              <th class="col">Next Arrival</th>
+              <th class="col">Minutes Away</th>
+            </tr>
+            <tr></tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 
+    <div class="update-input">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h3 class="panel-title">Add Train</h3>
+        </div>
+        <div class="panel-body">
+
+          <form>
+            <div class="form-group">
+              <label for="text">Train Name</label>
+              <input type="text" class="form-control" id="name-input">
+            </div>
+
+            <div class="form-group">
+              <label for="text">Destination</label>
+              <input type="text" class="form-control" id="destination-input">
+            </div>
+
+            <div class="form-group">
+              <label for="text">First Train Time (HH:mm - military time)</label>
+              <input type="text" class="form-control" id="first-train-time-input">
+            </div>
+
+            <div class="form-group">
+              <label for="text">Frequency (min)</label>
+              <input type="text" class="form-control" id="frequency-input">
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="add-train">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Main Content-->
+
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+
+  <script src="assets/javascript/train.js"></script>
 
 </body>
-
-</html>
 
 </html>

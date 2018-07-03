@@ -1,3 +1,11 @@
-.jumbotron-fluid {
-    background-image: url("assets/images/train.jpg");
+body {
+    background-image: url("Train-time/assets/images/train.jpg" );
+}
+
+.update-input {
+    min-width: 800px;
+}
+
+.schedule {
+    min-width: 800px;
 }

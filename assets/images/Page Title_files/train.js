@@ -1,4 +1,4 @@
-
+// $ (document).ready(function(){
 
 // Initialize Firebase
 // var config = {
@@ -66,7 +66,7 @@ console.log(next);
 
 
 //Adding Form data to Table///
-$("#schedule-table").append("<tr><td>" + name + "</td>" 
+$("#schedule-table").append("<tr><td>" + name + "</tr><td>" 
 
 // + destination + "</td><td>" +
 // frequency + "</td><td>" + next + "</td><td>" + far + "</td><td>"

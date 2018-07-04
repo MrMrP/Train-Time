@@ -51,6 +51,19 @@ $("#add-train").on("click", function (event) {
         next : next
     });
 })
+
+database.ref().on('value', function(snapshot) {
+    $("#schedule-table").append(`
+        <tr>
+            <td>${snapshot.val().name}</td>
+            <td>${snapshot.val().destination}</td>
+            <td>${snapshot.val().frequency}</td>
+            <td>${snapshot.val().next}</td>
+            <td>Here</td>
+        </tr>
+    `);
+});
+
 // })
 // Firebase watcher + initial loader HINT: .on("value")
 // database.ref().on("value", function(snapshot) {
@@ -65,17 +78,6 @@ $("#add-train").on("click", function (event) {
 // })
 // console.log(far);
 
-database.ref().on('value', function(snapshot) {
-    $("#schedule-table").append(`
-        <tr>
-            <td>${snapshot.val().name}</td>
-            <td>${snapshot.val().destination}</td>
-            <td>${snapshot.val().frequency}</td>
-            <td>${snapshot.val().next}</td>
-            <td>Here</td>
-        </tr>
-    `);
-});
 
 //Adding Form data to Table///
 // $("#schedule-table").append("<tr><td>" + name + "</td>" 

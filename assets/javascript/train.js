@@ -52,6 +52,7 @@ $("#add-train").on("click", function (event) {
     });
 })
 
+//Adding Form data to Table///
 database.ref().on('value', function(snapshot) {
     $("#schedule-table").append(`
         <tr>
@@ -79,18 +80,5 @@ database.ref().on('value', function(snapshot) {
 // console.log(far);
 
 
-//Adding Form data to Table///
-// $("#schedule-table").append("<tr><td>" + name + "</td>" 
+//Coding to calculate timed arrival and time until next arrival
 
-
-// + destination + "</td><td>" +
-// frequency + "</td><td>" + next + "</td><td>" + far + "</td><td>"
-
-// );
-
-
-
-// var myNum = 12;
-
-// console.log('My favorite number is ' + myNum);
-// console.log(`My favorite number is ${myNum}`)
